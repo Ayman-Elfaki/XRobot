@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" IgnorableNamespaces="uap mp iot">
-  <Identity Name="0d4f662f-3da0-476a-a368-de2b3820d530" Publisher="CN=Ayman" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="0d4f662f-3da0-476a-a368-de2b3820d530" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="9070InfiniteBits.XRobot" Publisher="CN=9D534FFA-15D6-4842-BD0E-EFBAFB174A60" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="30b27960-ed89-41fd-9475-e907e111f117" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>XRobot</DisplayName>
-    <PublisherDisplayName>Ayman</PublisherDisplayName>
+    <PublisherDisplayName>Infinite Bits</PublisherDisplayName>
     <Logo>Assets\Store\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
