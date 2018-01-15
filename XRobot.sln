@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRobot", "XRobot\XRobot.csproj", "{4568FA13-2DD2-4902-A846-802F90196679}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|ARM.ActiveCfg = Debug|ARM
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|ARM.Build.0 = Debug|ARM
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|ARM.Deploy.0 = Debug|ARM
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|x64.ActiveCfg = Debug|x64
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|x64.Build.0 = Debug|x64
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|x64.Deploy.0 = Debug|x64
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|x86.ActiveCfg = Debug|x86
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|x86.Build.0 = Debug|x86
+		{4568FA13-2DD2-4902-A846-802F90196679}.Debug|x86.Deploy.0 = Debug|x86
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|ARM.ActiveCfg = Release|ARM
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|ARM.Build.0 = Release|ARM
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|ARM.Deploy.0 = Release|ARM
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|x64.ActiveCfg = Release|x64
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|x64.Build.0 = Release|x64
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|x64.Deploy.0 = Release|x64
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|x86.ActiveCfg = Release|x86
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|x86.Build.0 = Release|x86
+		{4568FA13-2DD2-4902-A846-802F90196679}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B320369-33D5-43A7-A7AB-FC77FF0FF7B6}
+	EndGlobalSection
+EndGlobal
