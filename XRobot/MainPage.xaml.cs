@@ -92,7 +92,7 @@ namespace XRobot
             {
                 await _arduino.WriteByteAsync(240);
                 var lightValue = await _arduino.ReadByteAsync();
-                _color.A = Convert.ToByte(lightValue + 50);
+                _color.A = lightValue;
                 lightIntensityCircle.Fill = new SolidColorBrush(_color);
                 lightIntensity.Text = lightValue.ToString();
             }
