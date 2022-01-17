@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rxui:ReactiveContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                          xmlns:rxui="clr-namespace:ReactiveUI.Maui;assembly=ReactiveUI.Maui"
+                          xmlns:vm="clr-namespace:XRobot.ViewModels"
+                          xmlns:c="clr-namespace:XRobot.Controls"
+                          x:TypeArguments="vm:MainViewModel"
+                          x:Class="XRobot.Views.MainView"
+                          Title="XRobot"
+                          BackgroundColor="{x:DynamicResource Key=TrinaryColor}">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <Grid GridLayout.Row="0"
+              ColumnDefinitions="*,Auto,Auto,*"
+              HeightRequest="250">
+
+            <c:Sheet GridLayout.ColumnSpan="4"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="{x:DynamicResource Key=PrimaryColor}" />
+
+            <c:Monitor x:Name="speed"
+                       GridLayout.Column="1"
+                       HeightRequest="150"
+                       WidthRequest="150"
+                       VerticalOptions="End"
+                       HorizontalOptions="End"
+                       BackgroundColor="{x:DynamicResource Key=PrimaryColor}"
+                       IndicatorsColor="{x:DynamicResource Key=SecondaryColor}"
+                       Value="0" />
+
+            <c:Monitor x:Name="sensor"
+                       GridLayout.Column="2"
+                       HeightRequest="80"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                       WidthRequest="80"
+                       BackgroundColor="{x:DynamicResource Key=PrimaryColor}"
+                       IndicatorsColor="{x:DynamicResource Key=SecondaryColor}"
+                       Value="0" />
+        </Grid>
+
+        <StackLayout x:Name="controlsContainer"
+                     GridLayout.Row="1"
+                     VerticalOptions="Center"
+                     Spacing="15">
+            
+            <Grid ColumnSpacing="10"
+                  ColumnDefinitions="*,Auto,Auto,Auto,*">
+                <c:RepeatButton x:Name="minusButton"
+                                Path="M-2 0L2 0"
+                                GridLayout.Column="1"
+                                BackgroundColor="{x:DynamicResource Key=PrimaryColor}"
+                                IconColor="{x:DynamicResource Key=SecondaryColor}"
+                                HeightRequest="70"
+                                WidthRequest="70" />
+
+                <c:ToggleButton x:Name="bluetoothButton"
+                                GridLayout.Column="2"
+                                Path="M-1 -1L1 1L0 2L0 -2L1 -1L-1 1"
+                                BackgroundColor="{x:DynamicResource Key=PrimaryColor}"
+                                IconColor="{x:DynamicResource Key=SecondaryColor}"
+                                HeightRequest="70"
+                                WidthRequest="70" />
+
+                <c:RepeatButton x:Name="plusButton"
+                                GridLayout.Column="3"
+                                Path="M-2 0L2 0M0 2L0 -2"
+                                BackgroundColor="{x:DynamicResource Key=PrimaryColor}"
+                                IconColor="{x:DynamicResource Key=SecondaryColor}"
+                                HeightRequest="70"
+                                WidthRequest="70" />
+            </Grid>
+
+            <c:Joystick x:Name="joystickControl"
+                        Margin="15"
+                        WidthRequest="200"
+                        HeightRequest="200"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        BackgroundColor="{x:DynamicResource Key=PrimaryColor}"
+                        IndicatorsColor="{x:DynamicResource Key=SecondaryColor}"/>
+
+            <Label Text="XRobot"
+                   Margin="10"
+                   TextColor="{x:DynamicResource Key=PrimaryColor}"
+                   FontFamily="OriginTechRegular"
+                   HorizontalOptions="Center"
+                   FontSize="50" />
+
+        </StackLayout>
+
+        <ActivityIndicator x:Name="busyActivityIndicator"
+                           GridLayout.Row="1"
+                           HeightRequest="150"
+                           WidthRequest="150"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Color="{x:DynamicResource Key=PrimaryColor}" />
+
+
+    </Grid>
+
+</rxui:ReactiveContentPage>

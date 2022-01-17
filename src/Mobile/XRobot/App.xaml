@@ -1,0 +1,23 @@
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:local="clr-namespace:XRobot"
+             x:Class="XRobot.App"
+             windows:Application.ImageDirectory="Assets">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!--<Color x:Key="PrimaryColor">MediumSeaGreen</Color>-->
+            <Color x:Key="PrimaryColor">DarkSlateGray</Color>
+            <Color x:Key="SecondaryColor">#F2EFE5</Color>
+            <Color x:Key="TrinaryColor">#FFFFFF</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="FontFamily" Value="OpenSansRegular" />
+            </Style>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
