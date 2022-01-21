@@ -25,7 +25,7 @@
 .equ cValid = 0xFF
 
 .equ cMOVE = 0xF0
-.equ cREAD = 0x0F
+.equ cSense = 0x0F
 
 
 .macro transmitPacketMacro
@@ -248,7 +248,8 @@ adc_delay:
 	sbrs temp1, ADIF
 	rjmp adc_delay
 
-	lds @0, ADCL			; The Value From the ADC, only the low byte
+	lds @0, ADCL			; The Value From the ADC, low byte
+	lds @1, ADCH			; The Value From the ADC, high byte
 	
 	; STOP ADC Converter
 	ldi temp1, (0 << ADSC)|(1 << ADEN)|(1 << ADPS0)|(1 << ADPS1)|(1 << ADPS2)	
@@ -351,7 +352,7 @@ loop:
 cond_1:
 
 	lds temp1, packets+1
-	cpi temp1, cREAD
+	cpi temp1, cSense
 	brne cond_2
 
 	rjmp read_sensor
@@ -362,8 +363,21 @@ cond_2:
 
 read_sensor:
 
-	readSensorMacro temp1
+	ldi tem1, cBGN
+	transmitPacketMacro temp1
+	
+	ldi tem1, cSense
+	transmitPacketMacro temp1
 
+
+	readSensorMacro temp1, temp2
+	
+	transmitPacketMacro temp1
+	
+	transmitPacketMacro temp2
+
+	
+	ldi tem1, cEnd
 	transmitPacketMacro temp1
 
 	rjmp loop
