@@ -15,7 +15,6 @@ using System.Text;
 using XRobot.Controls;
 using XRobot.Helpers;
 
-#pragma warning disable CA1416
 
 namespace XRobot.Services;
 
@@ -38,6 +37,8 @@ public class BluetoothController
     private static readonly byte BGN = 0xAA;
 
     private static readonly byte FIN = 0x55;
+
+    private static readonly byte VLD = (byte)(BGN ^ FIN);
 
 
     private readonly IBluetoothLE _ble;
@@ -140,9 +141,10 @@ public class BluetoothController
                 var valueUpdatedObs = Observable.FromEventPattern<CharacteristicUpdatedEventArgs>(_characteristic, nameof(ICharacteristic.ValueUpdated))
                           .Select(s => s.EventArgs.Characteristic.Value);
 
-                valueUpdatedObs.Where(s => s.Length == 1)
-                               .Select(s => (float)s[0])
-                               .Select(s => s.Map(0, 255, 0, 100))
+                valueUpdatedObs.Where(s => s.Length == 5)
+                               .Where(p => (p[0] ^ p[4]) == VLD && p[1] == SNSE)
+                               .Select(s => (float)BitConverter.ToInt16(s[2..3]))
+                               .Select(s => s.Map(0, 1023, 0, 100))
                                .ObserveOn(RxApp.MainThreadScheduler)
                                .Subscribe(_sensorValue)
                                .DisposeWith(_disposables);

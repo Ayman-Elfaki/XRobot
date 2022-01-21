@@ -74,7 +74,7 @@ namespace XRobot.Controls
             _paint.Style = SKPaintStyle.Fill;
 
             _paint.Shader = SKShader.CreateLinearGradient(new SKPoint(0, 0),
-                                                          new SKPoint(info.Width, info.Height.Scale(0.5f)),
+                                                          new SKPoint(info.Width, ((float)info.Height).Scale(0.5f)),
                                                           new SKColor[]
                                                           {
                                                               BackgroundColor.ToBaseGradientColors(IsEnabled)[0],

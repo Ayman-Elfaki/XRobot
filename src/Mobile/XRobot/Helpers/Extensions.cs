@@ -11,24 +11,19 @@ public static class Extensions
         return new SKPoint(x, -y);
     }
 
-    public static float Map(this float value, float inValueMin, float inValueMax, float outValueMin, float outValueMax)
-    {
-        return (value - inValueMin) * (outValueMax - outValueMin) / (inValueMax - inValueMin) + outValueMin;
-    }
-
     public static SKPoint Clamp(this SKPoint value, float min, float max)
     {
         return new SKPoint(Math.Clamp(value.X, min, max), Math.Clamp(value.Y, min, max));
     }
 
-    public static float Scale(this float value, float scale)
+    public static T Scale<T>(this T value, T scale) where T : INumber<T>
     {
         return value * scale;
     }
 
-    public static float Scale(this int value, float scale)
+    public static T Map<T>(this T value, T inValueMin, T inValueMax, T outValueMin, T outValueMax) where T : INumber<T>
     {
-        return value * scale;
+        return (value - inValueMin) * (outValueMax - outValueMin) / (inValueMax - inValueMin) + outValueMin;
     }
 
 }
