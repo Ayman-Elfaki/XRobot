@@ -87,11 +87,11 @@ These are the components needed.
 
 <img src="./assets/arduino-uno.jpg" alt="Bluetooth" width="200"/>
 
-2- Bluetooth Serial Transceiver HM-10
+2-Cytron Shield L298P Motor Driver with GPIO.
 
 <img src="./assets/Shield-L298P.jpg" alt="Bluetooth" width="200"/>
 
-3- Cytron Shield L298P Motor Driver with GPIO.
+3-  Bluetooth Serial Transceiver HM-10
 
 <img src="./assets/Bluetooth-HM-10.jpg" alt="Chassis" width="200"/>
 
