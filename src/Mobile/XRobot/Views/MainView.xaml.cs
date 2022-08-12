@@ -99,7 +99,7 @@ public partial class MainView : ReactiveContentPage<MainViewModel>
 
     protected override async void OnAppearing()
     {
-        await Device.InvokeOnMainThreadAsync(async () =>
+        await MainThread.InvokeOnMainThreadAsync(async () =>
         {
             var startAnimation = new Animation()
             {

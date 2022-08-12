@@ -43,10 +43,15 @@
 		<MauiSplashScreen Include="Resources\appiconfg.svg" Color="DarkSlateGray" />
 
 		<!-- Images -->
-		<MauiImage Include="Resources\Images\*" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
+		<AndroidResource Remove="Resources\Images\**" />
+		<Compile Remove="Resources\Images\**" />
+		<EmbeddedResource Remove="Resources\Images\**" />
+		<MauiCss Remove="Resources\Images\**" />
+		<MauiXaml Remove="Resources\Images\**" />
+		<None Remove="Resources\Images\**" />
 
 		<EmbeddedResource Include="Resources\Fonts\OriginTech.ttf" />
 
@@ -58,18 +63,13 @@
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.30" />
 	</ItemGroup>
 
-
-	<ItemGroup>
-		<Folder Include="Resources\Images\" />
-	</ItemGroup>
-
 	
 	<ItemGroup>
 		<PackageReference Include="Plugin.BLE" Version="2.2.0-pre2" />
-		<PackageReference Include="ReactiveUI.Fody" Version="17.1.17" />
-		<PackageReference Include="ReactiveUI.Maui" Version="17.1.17" />
-		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.0-preview.179" />
-		<PackageReference Include="System.Runtime.Experimental" Version="6.0.2-mauipre.1.22054.8" />
+		<PackageReference Include="ReactiveUI.Fody" Version="18.3.1" />
+		<PackageReference Include="ReactiveUI.Maui" Version="18.3.1" />
+		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.0" />
+		<PackageReference Include="System.Runtime.Experimental" Version="6.0.2" />
 	</ItemGroup>
 
 

@@ -182,7 +182,7 @@ namespace XRobot.Controls
             var colors = (IsEnabled, IsChecked) switch
             {
                 (var x, var y) when y == true => BackgroundColor.ToSocketGradientColor(x),
-                (var x, var y) when y == false => BackgroundColor.ToSocketGradientColor(x).Reverse().ToArray(),
+                (var x, var _) => BackgroundColor.ToSocketGradientColor(x).Reverse().ToArray(),
             };
 
             _paint.Shader = SKShader.CreateRadialGradient(new SKPoint(radius.Scale(0.2f), -radius.Scale(0.2f)),
